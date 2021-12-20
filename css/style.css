@@ -202,11 +202,14 @@ section {
 /************  Start Service *******************/
 .service {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 .service .box {
+  flex: 1;
   text-align: center;
   padding: 3rem;
+  
 }
 .service .box i {
   height: 7rem;
@@ -235,10 +238,11 @@ section {
 .menu .box-container {
   display: -ms-grid;
   display: flex;
-  flex: 1;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 .menu .box-container .box {
+  flex: 1;
   text-align: center;
 }
 .menu .box-container .box:hover img {
@@ -329,6 +333,7 @@ section {
 /************ Start review *******************************/
 .reviews .box-container {
 display: flex;
+flex-wrap: wrap;
 }
 .reviews .box-container .box {
   flex: 1;
@@ -444,10 +449,11 @@ display: flex;
 .blogs .box-container {
   display: -ms-grid;
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 .blogs .box-container .box {
-  flex: 1;
+  flex: 1 ;
   position: relative;
 }
 .blogs .box-container .box:hover .image img {
@@ -521,6 +527,7 @@ display: flex;
   padding: 1.5rem 0;
 }
 /************ End blog***********************/
+
 /************ Start Footer *********************/
 .footer {
   text-align: center;
@@ -530,17 +537,16 @@ display: flex;
 .footer .links a {
   margin: 1rem;
 }
-
 .footer .credit {
   font-size: 2rem;
   line-height: 2;
   color: #aaa;
   padding-top: 2rem;
 }
-
 .footer .credit span {
   color: #eacf4f;
 }
+/********** End Footer ********************************/
 
 @media (max-width: 1200px) {
   .header {
@@ -591,15 +597,16 @@ display: flex;
   }
 }
 
-@media (max-width: 768px) {
+
+
+@media (min-width:0px) and (max-width:576px)  {  /* Mobile Screen */
+  html {
+    font-size: 50%;
+  }
+ 
+}
+@media (min-width:577px) and (max-width:768px)  {  /* iPad Screen */
   .home .content h3 {
     font-size: 2.5rem;
   }
 }
-
-@media (max-width: 450px) {
-  html {
-    font-size: 50%;
-  }
-}
-/*# sourceMappingURL=style.css.map */
